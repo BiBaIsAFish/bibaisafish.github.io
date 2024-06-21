@@ -143,3 +143,8 @@ footer {
     opacity: 0;
     padding: 0; /* 避免 padding 影響高度 */
 }
+
+#map {
+    height: 500px;
+    width: 100%;
+}

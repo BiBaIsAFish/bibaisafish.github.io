@@ -34,3 +34,21 @@ document.getElementById("home").addEventListener("click", () => {
         behavior: 'smooth'
     });
 });
+
+function loadMap() {
+    var map = new maplibregl.Map({
+        maxPitch: 85,
+        container: 'map',
+        style: 'https://service.polstarapis.com/mapstyle/default/style.json',
+        center: [120.670521939486, 24.145019210011],
+        zoom: 17,
+        bearing: 0,
+        pitch: 0,
+        interactive: true
+    })
+    map.addControl(new maplibregl.NavigationControl({}))
+    new maplibregl.Marker({ color: '#FF0000' }).setLngLat([120.670521939486, 24.145019210011]).addTo(map)
+}
+window.onload = function () {
+    loadMap()
+}
